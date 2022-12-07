@@ -109,21 +109,14 @@ export const Container = styled.div`
         gap: 1rem;
         width: 100%;
 
-
-        button {
-            padding: 1rem;
-            border-radius: 2.5rem; 
-            background-color: transparent;
-            border: none;
-            color: red;
-            font-weight: 600;
-
-            :hover {
-               background-color: rgba(204, 204, 204, 0.4);
-           }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
         }
 
-        button:first-child {
+        button {   
+            padding: 1rem;
+            border-radius: 2.5rem; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -134,6 +127,18 @@ export const Container = styled.div`
 
            :hover {
                 opacity: 0.8 ;
+           }
+        }
+
+        .cancelButton {
+
+            background-color: transparent;
+            border: none;
+            color: red;
+            font-weight: 600;
+
+            :hover {
+               background-color: rgba(204, 204, 204, 0.4);
            }
         }
 
